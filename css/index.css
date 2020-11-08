@@ -1,0 +1,117 @@
+@import 'reset.css';
+#game{
+    width:100%;
+    height:600px;
+    background:url('../images/sky.png');
+    position: relative;
+}
+.bird{
+    width:30px;
+    height:30px;
+    background: url('../images/birds.png');
+    position: absolute;
+    left:0;
+    right:0;
+    top:235px;
+    margin: 0 auto;
+}
+.start{
+    width:200px;
+    height:60px;
+    position: absolute;
+    left:0;
+    right:0;
+    top:295px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 60px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.start-white{
+    font-size: 24px;
+    color:#fff;
+}
+.start-blue{
+    font-size: 36px;
+    color:#09f;
+}
+.score{
+    color:#fff;
+    text-align: center;
+    font-size: 24px;
+    display: none;
+}
+.mask{
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,.7);
+    position: absolute;
+    z-index: 2;
+    display: none;
+}
+.end{
+    position: absolute;
+    left:50%;
+    top:75px;
+    transform:translateX(-50%);/*css3的属性，该属性能改变坐标轴的位置，适用于无法定宽高的元素的居中坐标问题*/
+    text-align: center;
+    z-index: 3;
+    display: none;
+
+}
+.gameOver{
+    color:red;
+    font-size: 35px;
+    font-weight: bolder;
+}
+.result,.fin-score{
+    font-size: 20px;
+    color:#ff0;
+    font-weight: bolder;
+    display: block;
+    margin-top: 20px;
+}
+.rank{
+    margin-top: 20px;
+    color:#09f;
+    text-align: left;
+    /* text-align: center; */
+}
+.rank .rank-item{
+    height:30px;
+    margin-bottom: 10px;
+    padding:0 10px;
+    line-height: 30px;
+    font-size: 13px;
+}
+.rank .rank-item .number{
+    display: inline-block;
+    width:14px;
+    height:14px;
+    margin-right: 10px;
+    color:#fff;
+    background: #8eb9f5;
+    text-align: center;
+    line-height: 14px;
+}
+.rank .rank-item .first{
+    background: #f54545;
+}
+.rank .rank-item .second{
+    background: #ff8547;
+}
+.rank .rank-item .third{
+    background:#ffac38;
+}
+.rank .rank-item .score-item{
+   display: inline-block;
+   width: 30px;
+}
+.end .restart{
+    color: #09f;
+    font-size: 18px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
