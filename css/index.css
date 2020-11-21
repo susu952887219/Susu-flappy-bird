@@ -2,7 +2,7 @@
 #game{
     width:100%;
     height:600px;
-    background:url('../images/sky.png');
+    background:url('../images/sky.png');/*不能设置no-repeat,要让图片repeat,后续背景图片才能移动*/
     position: relative;
 }
 .bird{
@@ -10,10 +10,10 @@
     height:30px;
     background: url('../images/birds.png');
     position: absolute;
-    left:0;
-    right:0;
+    left:50%;
     top:235px;
-    margin: 0 auto;
+    margin-left:-15px;
+    transition:top .3s linear;/*所有样式都有过渡效果 0.3秒内完成 匀速完成*/
 }
 .start{
     width:200px;
@@ -27,6 +27,7 @@
     line-height: 60px;
     font-weight: bolder;
     cursor: pointer;
+    transition:all .3s linear;
 }
 .start-white{
     font-size: 24px;
@@ -115,3 +116,22 @@
     cursor: pointer;
 }
 
+.pipe {
+    position: absolute;
+    /* left: 300px; */
+    width: 52px;
+    height: 150px;
+    background-color: red;
+    z-index: 1;
+  }
+  
+  .pipe.pipe-up {
+    top: 0;
+    background-image: url('../images/pipe2.png');
+    background-position-y: bottom;/*设置图片对齐方式为底部对齐*/
+  }
+  
+  .pipe.pipe-bottom {
+    bottom: 0;
+    background-image: url('../images/pipe1.png');
+  }
