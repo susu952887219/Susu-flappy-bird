@@ -302,7 +302,7 @@ var bird={
     },
     renderRankList:function(){
       var template = '';
-      for(var i = 0;i < 8; i++){
+      for(var i = 0;i < this.scoreArr.length && i < 8; i++){
         var degreeClass = '';
         switch (i) {
           case 0:
